@@ -54,5 +54,5 @@ title('Encoded Waveform');
 xlabel('Bits');
 ylabel('Binary Signal');
 ylim([-1 2]);
-grid on;
+grid on
 set(gca, 'FontSize', 12, 'FontWeight', 'bold');
