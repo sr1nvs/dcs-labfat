@@ -1,4 +1,4 @@
-# dcs-labfat
+# DCS - LABFAT
 
 All codes for DCS Lab
 
