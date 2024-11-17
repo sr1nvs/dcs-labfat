@@ -29,13 +29,11 @@ end
 
 % Plotting
 figure(1);
-plot(t, x, 'LineWidth', 2);
+plot(t, x, 'LineWidth', 2); hold on;
+stem(ts, xs, 'r', 'LineWidth', 2); hold off;
 title('Original and Sampled Signal');
 xlabel('Time');
 ylabel('Amplitude');
-hold on;
-stem(ts, xs, 'r', 'LineWidth', 2);
-hold off;
 legend('Original signal', 'Sampled signal');
 set(gca, 'FontSize', 12, 'FontWeight', 'bold');
 
@@ -56,5 +54,5 @@ title('Encoded Waveform');
 xlabel('Bits');
 ylabel('Binary Signal');
 ylim([-1 2]);
-set(gca, 'FontSize', 12, 'FontWeight', 'bold');
 grid on;
+set(gca, 'FontSize', 12, 'FontWeight', 'bold');
