@@ -4,7 +4,7 @@ close all
 
 b = [1 0 1 0 1 0 1 0];
 n = length(b);
-a = zeros(1, n);
+a = zeros(1, n+1);
 
 a(1) = 1;
 

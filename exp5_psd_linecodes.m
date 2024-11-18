@@ -6,9 +6,8 @@ V=1;
 f=0:Rb/100:3*Rb;
 fTb=f*Tb;                        
 
-
-up_nrz = ((V^2)/4)*Tb*(sinc(fTb).^2)+((V^2)/4)*dirac(f);  
 p_nrz=(V^2)*Tb*(sinc(fTb).^2); 
+up_nrz = ((V^2)/2)*Tb*(sinc(fTb).^2)+((V^2)/4)*dirac(f);  
 bp_nrz=(V^2)*Tb*(sinc(fTb)).*(sinc(fTb)).*(sin(pi*fTb)).*(sin(pi*fTb));     
 manchester=(V^2)*Tb*(sinc(fTb/2)).*(sinc(fTb/2)).*(sin(pi*fTb/2)).*(sin(pi*fTb/2));
 

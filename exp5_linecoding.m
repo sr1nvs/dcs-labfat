@@ -19,11 +19,11 @@ polar_nrz = zeros(1,length(t));
 for i = 1:N
     if m(i) == 1
         m_s((i-1)*100 + 1:i*100) = 1;
-        nrz((i-1)*100 + 1:i*100) = 0;
+        nrz((i-1)*100 + 1:i*100) = 1;
         rz((i-1)*100 + 1:(i-1)*100 + 50) = 1; 
     else
         m_s((i-1)*100 + 1:i*100) = 0;
-        nrz((i-1)*100 + 1:i*100) = 1; 
+        nrz((i-1)*100 + 1:i*100) = 0; 
         rz((i-1)*100 + 1:(i-1)*100 + 50) = 0; 
     end
 end
@@ -46,13 +46,13 @@ for i=1:N
     end
 end
 
-for i = 0:N-1
-  if m(i+1) == 1
-    manchester(i*100+1:(i+0.5)*100) = 1;
-    manchester((i+0.5)*100+1:(i+1)*100) = -1;
+for i = 1:N
+  if m(i) == 1
+    manchester((i-1)*100+1:(i-1)*100+50) = -1;
+    manchester((i-1)*100+51:(i)*100) = 1;
   else
-    manchester(i*100+1:(i+0.5)*100) = -1;
-    manchester((i+0.5)*100+1:(i+1)*100) = 1;
+    manchester((i-1)*100+1:(i-1)*100+50) = 1;
+    manchester((i-1)*100+51:(i)*100) = -1;
   end
 end
 

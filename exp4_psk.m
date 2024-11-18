@@ -50,8 +50,8 @@ for i = 1:N
     set(gca, 'FontSize', 12, 'FontWeight', 'bold');
     hold on;
     
-    t1 = t1 + (Tb + 0.01);
-    t2 = t2 + (Tb + 0.01);
+    t1 = t1 + (Tb);
+    t2 = t2 + (Tb);
 end
 hold off;
 
@@ -95,8 +95,8 @@ for i = 1:N
         demod(i) = 0;
     end
     
-    t1 = t1 + (Tb + 0.01);
-    t2 = t2 + (Tb + 0.01);
+    t1 = t1 + (Tb);
+    t2 = t2 + (Tb);
 end
 
 % Plotting the Demodulated Data Bits

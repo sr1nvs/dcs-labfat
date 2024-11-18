@@ -23,7 +23,7 @@ for i = 1:N
     % Plotting
     figure(1);
     subplot(5, 1, 2); 
-    axis([0 N -2 2]);
+    axis([0 N -1 2]);
     plot(t, message(i, :), 'b', 'LineWidth', 2);
     title('Message Signal');
     xlabel('t'); ylabel('m(t)');
@@ -39,8 +39,8 @@ for i = 1:N
     set(gca, 'FontSize', 12, 'FontWeight', 'bold')
     hold on;
     
-    t1 = t1 + (Tb + 0.01);
-    t2 = t2 + (Tb + 0.01);
+    t1 = t1 + (Tb);
+    t2 = t2 + (Tb);
 end
 hold off;
 
@@ -66,8 +66,8 @@ for i = 1:N
     t = t1:Tb/100:t2;
     x = sum(c .* ask_sig(i, :));
     demod(i) = (x > 0); % Demodulation logic
-    t1 = t1 + (Tb + 0.01);
-    t2 = t2 + (Tb + 0.01);
+    t1 = t1 + (Tb);
+    t2 = t2 + (Tb);
 end
 
 subplot(5, 1, 5);
